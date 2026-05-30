@@ -405,6 +405,54 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
   .hero-stats { gap: 24px; }
   .hero-features { grid-template-columns: 1fr; }
 }
+
+/* POPUP LAYANAN */
+.layanan-popup{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;z-index:4000;padding:20px}
+.layanan-popup.show{display:flex}
+.layanan-popup-card{background:#fff;max-width:700px;width:100%;border-radius:18px;padding:28px;max-height:85vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.layanan-popup-card h2{margin-bottom:16px}
+.layanan-popup-card ul{padding-left:22px;line-height:2}
+.layanan-close{float:right;border:none;background:#E8593A;color:#fff;padding:8px 14px;border-radius:999px;cursor:pointer;font-weight:700}
+
+
+.layanan-popup-card{
+background:linear-gradient(160deg,#1A1A1A 0%,#0d2a2a 100%) !important;
+color:#fff;
+border:1px solid rgba(54,199,199,.25);
+}
+.popup-kicker{
+color:#36C7C7;
+font-size:12px;
+font-weight:800;
+letter-spacing:3px;
+margin-bottom:8px;
+}
+.popup-divider{
+height:2px;
+background:linear-gradient(90deg,#36C7C7,#F97316);
+margin:16px 0 20px;
+border-radius:999px;
+}
+.layanan-list{
+list-style:none !important;
+padding:0 !important;
+margin:0;
+display:grid;
+gap:12px;
+}
+.layanan-list li{
+padding:14px 16px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:10px;
+font-weight:600;
+transition:.2s;
+}
+.layanan-list li:hover{
+border-color:#36C7C7;
+transform:translateX(4px);
+}
+
 </style>
 </head>
 <body>
@@ -432,6 +480,30 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
     </div>
   </div>
 </div>
+
+
+
+<div class="layanan-popup" id="layananPopup">
+  <div class="layanan-popup-card">
+    <button class="layanan-close" id="closeLayananPopup">Tutup</button>
+    <div class="popup-kicker">LAYANAN KAMI</div>
+    <h2>Puncak Tangan</h2>
+    <div class="popup-divider"></div>
+    <ul class="layanan-list">
+      <li>Jasa Porter</li>
+      <li>Open Privat Trip</li>
+      <li>Private Trip</li>
+      <li>Glamp Camp</li>
+      <li>One Day Trip</li>
+      <li>Tektok</li>
+      <li>Sewa Alat Outdoor</li>
+      <li>Armada Transport</li>
+      <li>Puncak Tangan Learning</li>
+    </ul>
+  </div>
+</div>
+
+
 
 <!-- AUDIO TOGGLE -->
 <button class="audio-toggle" id="audioToggle" aria-label="Pause atau resume lagu">⏸️</button>
@@ -999,7 +1071,19 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
   };
 
   document.getElementById('openSite').addEventListener('click', () => revealMain('beranda'));
-  document.getElementById('lihatLayanan').addEventListener('click', () => revealMain('layanan'));
+  
+document.getElementById('lihatLayanan').addEventListener('click', () => {
+  document.getElementById('layananPopup').classList.add('show');
+});
+document.getElementById('closeLayananPopup').addEventListener('click', () => {
+  document.getElementById('layananPopup').classList.remove('show');
+});
+document.getElementById('layananPopup').addEventListener('click', (e) => {
+  if(e.target.id==='layananPopup'){
+    e.currentTarget.classList.remove('show');
+  }
+});
+
 
   audioToggle.addEventListener('click', async () => {
     if (introAudio.paused) { try { await introAudio.play(); } catch(e){} } else { introAudio.pause(); }
