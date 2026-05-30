@@ -405,127 +405,6 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
   .hero-stats { gap: 24px; }
   .hero-features { grid-template-columns: 1fr; }
 }
-
-/* ===== MOBILE RESPONSIVE ENHANCEMENT ===== */
-@media (max-width: 768px){
-  nav{
-    flex-wrap:wrap;
-    height:auto;
-    padding:12px 16px;
-  }
-  .nav-brand{
-    width:100%;
-    text-align:center;
-    margin-bottom:10px;
-  }
-  .nav-links{
-    display:flex !important;
-    overflow-x:auto;
-    width:100%;
-    gap:8px;
-    padding-bottom:4px;
-    justify-content:flex-start;
-    scrollbar-width:none;
-  }
-  .nav-links::-webkit-scrollbar{display:none;}
-  .nav-links a{
-    white-space:nowrap;
-    flex-shrink:0;
-  }
-
-  .hero-inner{
-    padding:40px 20px;
-  }
-
-  .hero-title{
-    font-size:2rem;
-    line-height:1.2;
-  }
-
-  .hero-subtitle,
-  .intro-subtitle{
-    font-size:0.95rem;
-  }
-
-  .hero-features,
-  .layanan-grid,
-  .trip-grid,
-  .store-grid,
-  .blog-grid,
-  .testi-grid,
-  .logo-variants-grid,
-  .dont-grid,
-  .color-grid,
-  .usage-grid,
-  .visi-grid,
-  .kontak-grid{
-    grid-template-columns:1fr !important;
-  }
-
-  .stats-grid{
-    grid-template-columns:repeat(2,1fr) !important;
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr !important;
-  }
-
-  .card-body,
-  .card-header,
-  .page-inner{
-    padding-left:16px !important;
-    padding-right:16px !important;
-  }
-
-  .about-cover-brand{
-    font-size:28px;
-  }
-
-  .clearspace-visual{
-    width:100%;
-    max-width:220px;
-    margin:auto;
-  }
-
-  .store-banner{
-    text-align:center;
-    justify-content:center;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    text-align:center;
-  }
-}
-
-@media (max-width: 480px){
-  .hero-stats{
-    gap:16px;
-  }
-
-  .hero-stat-num{
-    font-size:1.5rem;
-  }
-
-  .stats-grid{
-    grid-template-columns:1fr !important;
-  }
-
-  .galeri-grid{
-    grid-template-columns:1fr !important;
-  }
-
-  .intro-panel{
-    padding:24px 18px;
-  }
-
-  .intro-logo,
-  .about-cover-logo{
-    width:110px;
-    height:110px;
-  }
-}
-
 </style>
 </head>
 <body>
@@ -612,7 +491,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 <div class="page-view" id="page-layanan">
   <div class="page-inner">
     <div class="card-block">
-      <div class="card-header"><h2>Layanan Kami</h2><div class="card-num">1</div></div>
+      <div class="card-header"><h2>Layanan Kami</h2></div>
       <div class="card-body">
         <div class="layanan-grid">
           <div class="layanan-card"><div class="layanan-icon">🎒</div><div class="layanan-title">Jasa Porter</div><div class="layanan-desc">Porter profesional & bersertifikat siap meringankan beban bawaanmu agar perjalanan lebih nyaman dan fokus menikmati alam.</div></div>
@@ -646,7 +525,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 <div class="page-view" id="page-trip">
   <div class="page-inner">
     <div class="card-block">
-      <div class="card-header"><h2>Trip Populer</h2><div class="card-num">2</div></div>
+      <div class="card-header"><h2>Trip Populer</h2> </div>
       <div class="card-body">
         <div class="trip-grid">
           <div class="trip-card">
@@ -697,7 +576,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 
     <!-- VISI & FILOSOFI -->
     <div class="card-block">
-      <div class="card-header"><h2>Visi & Filosofi</h2><div class="card-num">1</div></div>
+      <div class="card-header"><h2>Visi & Filosofi</h2> </div>
       <div class="card-body">
         <div class="visi-grid">
           <div class="visi-text">
@@ -731,7 +610,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 
     <!-- VARIAN LOGO -->
     <div class="card-block">
-      <div class="card-header"><h2>Varian Logo</h2><div class="card-num">2</div></div>
+      <div class="card-header"><h2>Varian Logo</h2> </div>
       <div class="card-body">
         <div class="logo-variants-grid">
           <div class="logo-card"><div class="logo-card-label">Primary - Teal Background</div><div class="logo-card-preview bg-teal"><img src="https://raw.githubusercontent.com/planetfajar/website/034d24511b68a61c63b44bcff5f33edeca3c22d6/logo.png" alt="Logo Primary"></div></div>
@@ -746,7 +625,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 
     <!-- PALET WARNA -->
     <div class="card-block">
-      <div class="card-header"><h2>Palet Warna Utama</h2><div class="card-num">3</div></div>
+      <div class="card-header"><h2>Palet Warna Utama</h2> </div>
       <div class="card-body">
         <div class="color-grid">
           <div class="color-card">
@@ -770,7 +649,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 
     <!-- TIPOGRAFI -->
     <div class="card-block">
-      <div class="card-header"><h2>Tipografi Brand</h2><div class="card-num">4</div></div>
+      <div class="card-header"><h2>Tipografi Brand</h2> </div>
       <div class="card-body">
         <div class="typo-label">Font Utama - Poppins</div>
         <div class="typo-showcase">
@@ -784,7 +663,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 
     <!-- AREA BERSIH -->
     <div class="card-block">
-      <div class="card-header"><h2>Area Bersih & Ukuran Minimum</h2><div class="card-num">5</div></div>
+      <div class="card-header"><h2>Area Bersih & Ukuran Minimum</h2> </div>
       <div class="card-body">
         <div class="clearspace-container">
           <div class="clearspace-visual">
@@ -807,7 +686,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 
     <!-- JANGAN DILAKUKAN -->
     <div class="card-block">
-      <div class="card-header orange-line"><h2>Jangan Dilakukan</h2><div class="card-num orange">6</div></div>
+      <div class="card-header orange-line"><h2>Jangan Dilakukan</h2></div>
       <div class="card-body">
         <div class="dont-grid">
           <div class="dont-card"><div class="dont-preview" style="background:#EEE;"><img src="https://raw.githubusercontent.com/planetfajar/website/1f9bbe549b59c5bf53f631ece220d79f11a282b9/logo_tosca.png" style="width:80px;height:80px;object-fit:contain;transform:scaleX(1.6);" alt=""></div><div class="dont-label">Jangan Distorsi</div><div class="dont-desc">Jangan meregangkan atau memampatkan logo secara tidak proporsional</div></div>
@@ -822,7 +701,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 
     <!-- CONTOH PENGGUNAAN -->
     <div class="card-block">
-      <div class="card-header"><h2>Contoh Penggunaan</h2><div class="card-num">7</div></div>
+      <div class="card-header"><h2>Contoh Penggunaan</h2> </div>
       <div class="card-body">
         <div class="usage-grid">
           <div class="usage-card">
@@ -884,7 +763,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 <div class="page-view" id="page-galeri">
   <div class="page-inner">
     <div class="card-block">
-      <div class="card-header"><h2>Galeri Perjalanan</h2><div class="card-num">3</div></div>
+      <div class="card-header"><h2>Galeri Perjalanan</h2> </div>
       <div class="card-body">
         <div class="galeri-grid">
           <div class="galeri-item tall"><div class="galeri-bg" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80');"></div><div class="galeri-overlay"></div></div>
@@ -907,7 +786,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 <div class="page-view" id="page-testimoni">
   <div class="page-inner">
     <div class="card-block">
-      <div class="card-header"><h2>Kata Mereka</h2><div class="card-num">4</div></div>
+      <div class="card-header"><h2>Kata Mereka</h2> </div>
       <div class="card-body">
         <div class="testi-grid">
           <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Porter dari Puncak Tangan luar biasa! Mereka tidak hanya membawa beban, tapi juga menjadi teman perjalanan yang menyenangkan. Sampai di puncak Latimojong rasanya tidak percaya!"</p><div class="testi-author"><div class="testi-avatar">AR</div><div><div class="testi-name">Andi Rizky</div><div class="testi-role">Pendaki, Makassar</div></div></div></div>
@@ -939,7 +818,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 <div class="page-view" id="page-store">
   <div class="page-inner">
     <div class="card-block">
-      <div class="card-header"><h2>Puncak Tangan Store</h2><div class="card-num">6</div></div>
+      <div class="card-header"><h2>Puncak Tangan Store</h2> </div>
       <div class="card-body">
         <div class="store-filter">
           <button class="filter-btn active" onclick="filterStore(this,'all')">Semua</button>
@@ -1007,7 +886,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 40
 <div class="page-view" id="page-blog">
   <div class="page-inner">
     <div class="card-block">
-      <div class="card-header"><h2>Blog & Tips Pendakian</h2><div class="card-num">7</div></div>
+      <div class="card-header"><h2>Blog & Tips Pendakian</h2> </div>
       <div class="card-body">
         <div class="blog-grid">
           <div class="blog-card"><div class="blog-img"><div class="blog-img-bg" style="background-image:url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80');"></div><span class="blog-tag">Tips</span></div><div class="blog-content"><div class="blog-date">12 Januari 2025</div><div class="blog-title">10 Hal Wajib Dipersiapkan Sebelum Mendaki Gunung di Sulawesi Selatan</div><div class="blog-excerpt">Persiapan matang adalah kunci pendakian yang aman dan menyenangkan. Dari perlengkapan fisik hingga mental, simak panduan lengkapnya.</div><a href="#" class="blog-link">Baca Selengkapnya →</a></div></div>
